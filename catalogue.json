@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "title": "Curtain & Table",
+  "sketches": [
+    {
+      "id": "2026-10-22",
+      "title": "Curtain & Table",
+      "created": "2026-10-22",
+      "entry": "./",
+      "protocol": "sketch-player:v1",
+      "capabilities": [
+        "play",
+        "pause",
+        "reset",
+        "get-setup",
+        "setup",
+        "save-setup",
+        "load-setup"
+      ],
+      "sound": "gesture-required",
+      "description": "A music-driven soft-body curtain above a French café setting for two. Bass shifts a 3D noise field, harmony shapes its scale, and musical cues animate the reflections. Grab the walnut furniture and ceramic plates to interact with the tessellated surface.",
+      "schemaVersion": 1,
+      "date": "2026-10-22",
+      "datePrecision": "day",
+      "author": "Lars Berg",
+      "tags": [
+        "threejs",
+        "soft-body",
+        "physics",
+        "tessellation",
+        "dual-mesh",
+        "generative-audio",
+        "audio-reactive",
+        "strudel",
+        "interactive"
+      ],
+      "madeWith": [
+        "threejs",
+        "cannon-es",
+        "strudel",
+        "web-audio"
+      ],
+      "audio": "gesture-required",
+      "thumbnail": {
+        "src": "./thumbnail.jpg",
+        "width": 1600,
+        "height": 1184,
+        "alt": "A faceted curtain in warm gold, pink and burgundy behind a round walnut café table, two slim wooden chairs and two white ceramic plates on a tiled floor."
+      },
+      "embed": {
+        "src": "./?embed=1",
+        "allow": [
+          "autoplay",
+          "fullscreen"
+        ],
+        "resize": "container",
+        "controls": [
+          "play",
+          "pause",
+          "reset",
+          "get-setup",
+          "setup",
+          "save-setup",
+          "load-setup"
+        ],
+        "protocol": "sketch-player:v1",
+        "parentOriginParameter": "parentOrigin"
+      },
+      "repository": "https://github.com/larsberg/2026-10-22",
+      "url": "https://larsberg.github.io/2026-10-22/",
+      "manifest": "./sketch.json"
+    }
+  ]
+}

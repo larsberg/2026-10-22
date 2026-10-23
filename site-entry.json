@@ -1,0 +1,30 @@
+{
+  "id": "2026-10-22",
+  "title": "Curtain & Table",
+  "slug": "2026-10-22",
+  "aliases": [],
+  "hidden": false,
+  "date": "2026-10-22",
+  "datePrecision": "day",
+  "thumbnail": {
+    "src": "https://larsberg.github.io/2026-10-22/thumbnail.jpg",
+    "width": 1600,
+    "height": 1184,
+    "alt": "A faceted curtain in warm gold, pink and burgundy behind a round walnut café table, two slim wooden chairs and two white ceramic plates on a tiled floor."
+  },
+  "runtimeUrl": "https://larsberg.github.io/2026-10-22/?embed=1",
+  "standaloneUrl": "https://larsberg.github.io/2026-10-22/",
+  "iframeAllow": "autoplay; fullscreen",
+  "madeWith": [
+    "threejs",
+    "cannon-es",
+    "strudel",
+    "web-audio"
+  ],
+  "sidebarPattern": "waves",
+  "sidebarTone": "dark",
+  "sidebar": {
+    "textColor": "#ffffff",
+    "backgroundColor": "#000000af"
+  }
+}
