@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createRawScore, rawHarmony } from '../src/raw-score.js';
+import { createRawScore, rawHarmony, rawScoreInfo, rawSectionAt } from '../src/raw-score.js';
 import { rawGateAt } from '../src/raw-voices.js';
 import { rawAudioSettings } from '../src/raw-audio-settings.js';
 import { validateInstruments } from '../src/instrument-settings.js';
@@ -57,4 +57,18 @@ test('sparse drums leave phrase and bridge gaps, with an audible half-time snare
   assert.equal(Number(full.find(h=>h.value.layer==='snare').whole.begin),8.5);
   const settings=rawAudioSettings();
   assert.ok(settings.drums>0&&settings.instruments.snare.level>0);
+});
+
+
+test('the first rhythmic gate arrives after sixteen seconds and returns on every pass',()=>{
+  const score=createRawScore();
+  const gates=onsets(score,0,16).filter(h=>h.value.layer==='keys'&&h.value.gateMode==='six');
+  assert.equal(Math.min(...gates.map(h=>Number(h.whole.begin))),8);
+  assert.equal(8*4*60/rawScoreInfo.bpm,16);
+  assert.equal(rawSectionAt(0).kind,'open');assert.equal(rawSectionAt(4).kind,'full');
+  for(const bar of [7,16,39,72+7,72+16])assert.ok(onsets(score,bar,bar+1).filter(h=>h.value.layer==='keys').every(h=>h.value.gateMode!=='six'));
+  for(const bar of [8,15,40,48,64,80,87,112]){
+    const keys=onsets(score,bar,bar+1).filter(h=>h.value.layer==='keys');
+    assert.ok(keys.length>0);assert.ok(keys.every(h=>h.value.gateMode==='six'&&h.value.gateDepth===1));
+  }
 });

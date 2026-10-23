@@ -9,7 +9,8 @@ export const rawHarmony = [
   { name: 'Gbm', note: 'f#2', hz: 92.498605678, ratios: [2, 12/5, 3, 4] },
 ];
 const sections = [
-  [0, 'Open fifths', 'open', .45], [8, 'Full harmony', 'full', .8],
+  [0, 'Open fifths', 'open', .45], [4, 'Full harmony', 'full', .8],
+  [8, 'First six-step gate', 'gate', 1],
   [16, 'Rising contours', 'glide', 1], [24, 'Sub / cuts', 'low', .72],
   [32, 'Filtered suspension', 'bridge', .24], [36, 'Rebuild', 'build', .65],
   [40, 'Six-step gate', 'gate', 1], [48, 'Fragments', 'fragment', .82],

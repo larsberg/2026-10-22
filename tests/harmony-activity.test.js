@@ -6,8 +6,8 @@ import { rawAudioSettings } from '../src/raw-audio-settings.js';
 
 test('harmony gate activity follows sounding synth effects across held notes and later passes',()=>{
   const score=createRawScore(),settings=rawAudioSettings();
-  for(const bar of [0,8,16,24,32,36,56,72,80])assert.equal(harmonyGateActivity(score,bar+.3,settings),0);
-  for(const bar of [40,48,64,112,120,136]){
+  for(const bar of [0,4,7,16,24,32,36,56,72,76])assert.equal(harmonyGateActivity(score,bar+.3,settings),0);
+  for(const bar of [8,15,40,48,64,80,87,112,120,136]){
     for(const phase of [.01,.2,.75,.99])assert.equal(harmonyGateActivity(score,bar+phase,settings),1);
   }
 });

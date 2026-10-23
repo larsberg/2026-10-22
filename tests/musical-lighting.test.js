@@ -13,7 +13,7 @@ const fixture=()=>{
 
 test('panel cues follow harmony density, lead entries and actual gate settings',()=>{
   const score=createRawScore(),settings=rawAudioSettings();
-  const open=compositionLightCues(score,.5,settings),full=compositionLightCues(score,8.5,settings);
+  const open=compositionLightCues(score,.5,settings),full=compositionLightCues(score,4.5,settings);
   assert.ok(full.keys>open.keys);assert.ok(full.brightness>open.brightness);
   const gated=compositionLightCues(score,40.3,settings);assert.equal(gated.gate,1);assert.ok(gated.melody>0);
   assert.equal(compositionLightCues(score,32.5,settings).melody,0);
